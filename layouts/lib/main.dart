@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:layouts/pages/cart.page.dart';
-import 'package:layouts/pages/login.page.dart';
+import 'package:layouts/pages/tabs.page.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +12,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: CartPage(),
+      home: DefaultTabController(
+        length: 3,
+        child: TabsPage(),
+      ),
     );
   }
 }

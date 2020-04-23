@@ -31,11 +31,11 @@ class TabsPage extends StatelessWidget {
             ),
           ),
         ],
-        labelColor: Colors.blue,
+        labelColor: Theme.of(context).primaryColor,
         unselectedLabelColor: Colors.black38,
         indicatorSize: TabBarIndicatorSize.label,
         indicatorPadding: EdgeInsets.all(5),
-        indicatorColor: Colors.blue,
+        indicatorColor: Theme.of(context).primaryColor,
       ),
     );
   }

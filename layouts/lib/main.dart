@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layouts/pages/tabs.page.dart';
+import 'package:layouts/themes/dark.theme.dart';
+import 'package:layouts/themes/light.theme.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,9 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter Layouts",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: darkTheme(),
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 3,

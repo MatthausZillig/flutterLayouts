@@ -8,7 +8,7 @@ class CartPage extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
-              child: productList(),
+              child: productList(context),
             ),
           ),
           Container(
@@ -33,7 +33,7 @@ class CartPage extends StatelessWidget {
                         "\$4250",
                         style: TextStyle(
                           fontSize: 20,
-                          color: Colors.blue,
+                          color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -44,7 +44,7 @@ class CartPage extends StatelessWidget {
                   width: 150,
                   height: 50,
                   decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                       borderRadius: BorderRadius.all(
                         Radius.circular(5),
                       )),
@@ -56,7 +56,7 @@ class CartPage extends StatelessWidget {
                     child: Text(
                       "Checkout",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Theme.of(context).accentColor,
                       ),
                     ),
                   ),
@@ -70,22 +70,22 @@ class CartPage extends StatelessWidget {
   }
 }
 
-Widget productList() {
+Widget productList(context) {
   return ListView(
     children: <Widget>[
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
     ],
   );
 }
 
-Widget productItem() {
+Widget productItem(context) {
   return Container(
     height: 120,
     margin: EdgeInsets.all(5),
@@ -112,7 +112,7 @@ Widget productItem() {
               Text(
                 "\$200",
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
               SizedBox(
